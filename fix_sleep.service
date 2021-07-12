@@ -1,0 +1,13 @@
+# systemd oneshot service to set sleep boolean on Apple Macbook Pro disks
+# Original by Pier Lim. Posted at https://kerpanic.wordpress.com/2018/03/13/apple-keyboard-get-function-keys-working-properly-in-ubuntu/
+
+[Unit]
+Description=Job that disables sleep from stopping nvme hardware on MBP
+    
+[Service]
+ExecStart=/sbin/fixsleep
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

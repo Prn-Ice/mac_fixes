@@ -1,0 +1,2 @@
+#!/bin/bash
+/bin/echo auto > /sys/bus/pci/devices/0000\:07\:00.0/power/control

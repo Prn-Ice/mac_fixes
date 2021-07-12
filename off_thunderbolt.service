@@ -1,0 +1,12 @@
+# systemd oneshot service to set thunderbolt boolean on Apple Macbook Pro
+
+[Unit]
+Description=Job that disables thunderbolt on MBP
+    
+[Service]
+ExecStart=/sbin/offthunderbolt
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
